@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Saurav Kumar | AI Team Lead Portfolio</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+    width:100%;
+    position:fixed;
+    top:0;
+    z-index:1000;
+    background:rgba(15,23,42,0.95);
+    backdrop-filter:blur(10px);
+    padding:18px 8%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 2px 10px rgba(0,0,0,0.3);
+}
+
+nav h2{
+    color:#38bdf8;
+    font-size:28px;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:25px;
+}
+
+nav ul li a{
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+    font-weight:500;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+}
+
+/* HERO SECTION */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:120px 20px;
+    background:
+    linear-gradient(rgba(15,23,42,0.85),rgba(15,23,42,0.95)),
+    url('https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070');
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    max-width:950px;
+}
+
+.profile-pic{
+    width:220px;
+    height:220px;
+    border-radius:50%;
+    object-fit:cover;
+    border:6px solid #38bdf8;
+    margin-bottom:25px;
+    box-shadow:0 0 35px rgba(56,189,248,0.5);
+}
+
+.hero h1{
+    font-size:72px;
+    margin-bottom:15px;
+    animation:fadeIn 1.5s ease;
+}
+
+.hero h2{
+    color:#38bdf8;
+    font-size:32px;
+    margin-bottom:25px;
+}
+
+.hero p{
+    font-size:19px;
+    line-height:1.9;
+    color:#d1d5db;
+}
+
+.buttons{
+    margin-top:40px;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 35px;
+    margin:10px;
+    border-radius:50px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.4s;
+}
+
+.btn-primary{
+    background:#38bdf8;
+    color:#0f172a;
+}
+
+.btn-primary:hover{
+    background:white;
+    transform:translateY(-3px);
+}
+
+.btn-secondary{
+    border:2px solid #38bdf8;
+    color:#38bdf8;
+}
+
+.btn-secondary:hover{
+    background:#38bdf8;
+    color:#0f172a;
+    transform:translateY(-3px);
+}
+
+/* SECTION */
+
+section{
+    padding:90px 8%;
+}
+
+.section-title{
+    text-align:center;
+    font-size:42px;
+    margin-bottom:60px;
+    color:#38bdf8;
+}
+
+/* STATS */
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:25px;
+}
+
+.stat-card{
+    background:#1e293b;
+    padding:40px 25px;
+    border-radius:20px;
+    text-align:center;
+    transition:0.4s;
+    border:1px solid rgba(255,255,255,0.05);
+}
+
+.stat-card:hover{
+    transform:translateY(-10px);
+    background:#0ea5e9;
+}
+
+.stat-card i{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.stat-card h3{
+    font-size:45px;
+    margin-bottom:10px;
+}
+
+/* ABOUT */
+
+.about{
+    display:grid;
+    grid-template-columns:1fr 2fr;
+    gap:50px;
+    align-items:center;
+}
+
+.about-img{
+    width:100%;
+    border-radius:25px;
+    box-shadow:0 0 30px rgba(56,189,248,0.3);
+}
+
+.about-text{
+    font-size:18px;
+    line-height:1.9;
+    color:#d1d5db;
+}
+
+/* SKILLS */
+
+.skills-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:25px;
+}
+
+.skill-card{
+    background:#1e293b;
+    padding:30px;
+    border-radius:20px;
+    transition:0.4s;
+}
+
+.skill-card:hover{
+    transform:scale(1.04);
+    background:#172554;
+}
+
+.skill-card i{
+    font-size:45px;
+    color:#38bdf8;
+    margin-bottom:20px;
+}
+
+.skill-card h3{
+    margin-bottom:15px;
+}
+
+.progress{
+    width:100%;
+    height:12px;
+    background:#334155;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.progress-bar{
+    height:100%;
+    background:#38bdf8;
+    border-radius:20px;
+}
+
+/* EXPERIENCE */
+
+.timeline{
+    position:relative;
+    margin-left:20px;
+}
+
+.timeline::before{
+    content:'';
+    position:absolute;
+    left:0;
+    top:0;
+    width:4px;
+    height:100%;
+    background:#38bdf8;
+}
+
+.timeline-item{
+    margin-left:35px;
+    margin-bottom:40px;
+    background:#1e293b;
+    padding:30px;
+    border-radius:20px;
+    position:relative;
+}
+
+.timeline-item::before{
+    content:'';
+    position:absolute;
+    left:-45px;
+    top:35px;
+    width:22px;
+    height:22px;
+    background:#38bdf8;
+    border-radius:50%;
+}
+
+.timeline-item h3{
+    color:#38bdf8;
+    margin-bottom:10px;
+}
+
+/* PROJECTS */
+
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.project-card{
+    background:#1e293b;
+    border-radius:20px;
+    overflow:hidden;
+    transition:0.4s;
+}
+
+.project-card:hover{
+    transform:translateY(-10px);
+}
+
+.project-card img{
+    width:100%;
+    height:230px;
+    object-fit:cover;
+}
+
+.project-content{
+    padding:25px;
+}
+
+.project-content h3{
+    margin-bottom:15px;
+    color:#38bdf8;
+}
+
+/* CERTIFICATIONS */
+
+.certifications{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:25px;
+}
+
+.cert-card{
+    background:#1e293b;
+    padding:30px;
+    border-radius:20px;
+    text-align:center;
+}
+
+.cert-card i{
+    font-size:50px;
+    color:#38bdf8;
+    margin-bottom:20px;
+}
+
+/* CONTACT */
+
+.contact-box{
+    background:#1e293b;
+    padding:50px;
+    border-radius:25px;
+    text-align:center;
+}
+
+.contact-box p{
+    margin:18px 0;
+    font-size:20px;
+}
+
+.socials{
+    margin-top:30px;
+}
+
+.socials a{
+    color:#38bdf8;
+    font-size:35px;
+    margin:0 15px;
+    transition:0.3s;
+}
+
+.socials a:hover{
+    color:white;
+    transform:translateY(-5px);
+}
+
+/* FOOTER */
+
+footer{
+    text-align:center;
+    padding:30px;
+    background:#020617;
+    color:#94a3b8;
+}
+
+/* ANIMATION */
+
+@keyframes fadeIn{
+
+from{
+    opacity:0;
+    transform:translateY(40px);
+}
+
+to{
+    opacity:1;
+    transform:translateY(0);
+}
+
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.hero h1{
+    font-size:45px;
+}
+
+.hero h2{
+    font-size:24px;
+}
+
+.about{
+    grid-template-columns:1fr;
+}
+
+nav ul{
+    display:none;
+}
+
+.profile-pic{
+    width:170px;
+    height:170px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<h2>Saurav Kumar</h2>
+
+<ul>
+
+<li><a href="#about">About</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<img src="profile.png" class="profile-pic">
+
+<h1>Saurav Kumar</h1>
+
+<h2>AI Team Lead | Python Developer | Automation Architect</h2>
+
+<p>
+
+11+ years of enterprise IT experience specializing in
+Python development, Automation Frameworks, REST APIs,
+GenAI applications, Agentic AI solutions, IoT automation,
+cloud infrastructure, and enterprise scale software delivery.
+
+</p>
+
+<div class="buttons">
+
+<a href="#contact" class="btn btn-primary">
+Hire Me
+</a>
+
+<a href="resume.pdf" class="btn btn-secondary" download>
+Download Resume
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- STATS -->
+
+<section>
+
+<h2 class="section-title">
+Professional Highlights
+</h2>
+
+<div class="stats">
+
+<div class="stat-card">
+<i class="fas fa-briefcase"></i>
+<h3>11+</h3>
+<p>Years Experience</p>
+</div>
+
+<div class="stat-card">
+<i class="fab fa-python"></i>
+<h3>7+</h3>
+<p>Years Python</p>
+</div>
+
+<div class="stat-card">
+<i class="fas fa-robot"></i>
+<h3>2+</h3>
+<p>Years GenAI</p>
+</div>
+
+<div class="stat-card">
+<i class="fas fa-project-diagram"></i>
+<h3>20+</h3>
+<p>Enterprise Projects</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<h2 class="section-title">
+About Me
+</h2>
+
+<div class="about">
+
+<div>
+
+<img src="profile.png" class="about-img">
+
+</div>
+
+<div class="about-text">
+
+<p>
+
+Result oriented Team Lead with expertise in Python,
+AI integrations, automation frameworks, cloud testing,
+performance engineering, REST APIs, and scalable enterprise solutions.
+
+</p>
+
+<br>
+
+<p>
+
+Currently working at Larsen & Toubro Technology Services (LTTS),
+leading automation and GenAI initiatives for enterprise clients.
+
+</p>
+
+<br>
+
+<p>
+
+Worked with Infosys, Synechron, and Tech Mahindra
+across AI systems, cloud infrastructure, telecom automation,
+IoT testing, and enterprise application development.
+
+</p>
+
+<br>
+
+<p>
+
+Strong hands-on experience in FastAPI, PyTest,
+Robot Framework, Locust, Docker, OpenStack,
+Google Cloud, and enterprise AI evaluation systems.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+<h2 class="section-title">
+Technical Skills
+</h2>
+
+<div class="skills-grid">
+
+<div class="skill-card">
+<i class="fab fa-python"></i>
+<h3>Python Development</h3>
+<div class="progress">
+<div class="progress-bar" style="width:95%"></div>
+</div>
+</div>
+
+<div class="skill-card">
+<i class="fas fa-robot"></i>
+<h3>GenAI & Agentic AI</h3>
+<div class="progress">
+<div class="progress-bar" style="width:88%"></div>
+</div>
+</div>
+
+<div class="skill-card">
+<i class="fas fa-code"></i>
+<h3>Automation Frameworks</h3>
+<div class="progress">
+<div class="progress-bar" style="width:92%"></div>
+</div>
+</div>
+
+<div class="skill-card">
+<i class="fas fa-cloud"></i>
+<h3>Cloud & Docker</h3>
+<div class="progress">
+<div class="progress-bar" style="width:85%"></div>
+</div>
+</div>
+
+<div class="skill-card">
+<i class="fas fa-server"></i>
+<h3>REST APIs & FastAPI</h3>
+<div class="progress">
+<div class="progress-bar" style="width:90%"></div>
+</div>
+</div>
+
+<div class="skill-card">
+<i class="fas fa-vial"></i>
+<h3>Performance Testing</h3>
+<div class="progress">
+<div class="progress-bar" style="width:86%"></div>
+</div>
+</div>
+
+</div>
+
+</section>
+
+<!-- EXPERIENCE -->
+
+<section id="experience">
+
+<h2 class="section-title">
+Professional Experience
+</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<h3>
+LTTS - Team Lead
+</h3>
+
+<p>
+2023 - Present
+</p>
+
+<br>
+
+<p>
+Leading enterprise AI integrations, automation platforms,
+framework design, sprint planning, client management,
+and scalable automation solutions.
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h3>
+Tech Mahindra - Associate Team Lead
+</h3>
+
+<p>
+2022 - 2023
+</p>
+
+<br>
+
+<p>
+Worked on cloud infrastructure testing,
+automation systems, and enterprise delivery projects.
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h3>
+Synechron - Senior Associate QC
+</h3>
+
+<p>
+2021 - 2022
+</p>
+
+<br>
+
+<p>
+Developed enterprise automation frameworks,
+backend testing systems, and REST API solutions.
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h3>
+Infosys - Technology Analyst
+</h3>
+
+<p>
+2014 - 2021
+</p>
+
+<br>
+
+<p>
+Worked on Cisco CUCM, AT&T Netcool,
+IoT automation, cloud testing, and telecom applications.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+<h2 class="section-title">
+Featured Projects
+</h2>
+
+<div class="projects-grid">
+
+<div class="project-card">
+
+<img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1170">
+
+<div class="project-content">
+
+<h3>
+AI Evaluation Framework
+</h3>
+
+<p>
+
+Developed customizable AI evaluation systems
+using Python, FastAPI, OpenAI APIs,
+and enterprise prompt engineering frameworks.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="project-card">
+
+<img src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1170">
+
+<div class="project-content">
+
+<h3>
+IoT Automation Platform
+</h3>
+
+<p>
+
+Built industrial automation solutions using MQTT,
+Modbus protocols, and Python based remote control systems.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="project-card">
+
+<img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?q=80&w=1170">
+
+<div class="project-content">
+
+<h3>
+Performance Testing Framework
+</h3>
+
+<p>
+
+Implemented scalable Locust based API stress testing,
+benchmarking, and enterprise automation frameworks.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CERTIFICATIONS -->
+
+<section>
+
+<h2 class="section-title">
+Certifications
+</h2>
+
+<div class="certifications">
+
+<div class="cert-card">
+
+<i class="fas fa-award"></i>
+
+<h3>
+Certified SAFe Practitioner
+</h3>
+
+</div>
+
+<div class="cert-card">
+
+<i class="fas fa-certificate"></i>
+
+<h3>
+IBM Coursera Machine Learning
+</h3>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+<h2 class="section-title">
+Contact Me
+</h2>
+
+<div class="contact-box">
+
+<p>
+<i class="fas fa-envelope"></i>
+sauravnitmn@gmail.com
+</p>
+
+<p>
+<i class="fas fa-phone"></i>
++91-9798587637
+</p>
+
+<p>
+<i class="fas fa-location-dot"></i>
+Bangalore | Pune | Gurugram | Kolkata
+</p>
+
+<div class="socials">
+
+<a href="https://github.com/saurav2791" target="_blank">
+<i class="fab fa-github"></i>
+</a>
+
+<a href="https://www.linkedin.com/in/saurav2791/" target="_blank">
+<i class="fab fa-linkedin"></i>
+</a>
+
+<a href="mailto:sauravnitmn@gmail.com">
+<i class="fas fa-envelope"></i>
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<p>
+
+© 2026 Saurav Kumar | AI Team Lead Portfolio
+
+</p>
+
+</footer>
+
+</body>
+
+</html>
